@@ -1,23 +1,21 @@
 // import logo from './logo.svg';
-import About from './component/About'
-import Contact from './component/Contact';
+import About from './component/pages/About'
+import Contact from './component/pages/Contact';
 import Navbar from './component/Navbar';
-import Projects from './component/Projects';
-import Skills from './component/Skills';
-import Testimonials from './component/Testimonials';
+import Projects from './component/pages/Projects';
+import Skills from './component/pages/Skills';
+import Testimonials from './component/pages/Testimonials';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <main>
+    <div className="text-gray-400 bg-gray-900 body-font">
       <Navbar />
       <About />
       <Projects />
       <Skills />
       <Testimonials />
       <Contact />
-    </main>
     </div>
   );
 }
