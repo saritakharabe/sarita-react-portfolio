@@ -1,24 +1,35 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
 
-function NavTabs({ currentPage, handlePageChange }) {
+import { navigation } from '../data';
+import { Link } from 'react-scroll';
+
+
+function NavTabs() {
   return (
-    <>
-      <Navbar bg="dark" variant="dark" expand="lg">
-        <Container>
-        <Navbar.Brand>Sarita Kharabe</Navbar.Brand>
-          <Nav className="me-auto my-2" expand="lg" style={{fontSize:"25px"}}>
-            <Nav.Link href="#about">About</Nav.Link>
-            <Nav.Link href="#projects">Projects</Nav.Link>
-            <Nav.Link href="#skills">Skills</Nav.Link>
-            <Nav.Link href="#contact">Contact</Nav.Link>
-            <Nav.Link href="#resume">Resume</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
-    </>
+    <nav>
+      <ul className='space-x-8 capitalize text-[20px] justify-right flex'>
+        {navigation.map((item, idx) => {
+          return (
+            <li
+              className='text-white hover:text-accent cursor-pointer'
+              key={idx}
+            >
+              <Link
+                to={item.href}
+                activeClass='active'
+                spy={true}
+                smooth={true}
+                duration={500}
+                offset={-70}
+                className='transition-all duration-300'
+              >
+                {item.name}
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
   );
 }
 

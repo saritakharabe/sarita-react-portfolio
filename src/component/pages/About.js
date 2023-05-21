@@ -1,22 +1,40 @@
-export default function About() {
+import React from "react";
+import Image from '../../assets/image/profilepic.jpeg';
+
+const About = () => {
   return (
-    <section id="about">
-      <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
-        <div className="lg:flex-grow lg:pr-24 md:pr-16 flex flex-col items-center text-center">
-          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
-            Hi, I'm Sarita Kharabe.
-            <br className="hidden lg:inline-block" />I love to build amazing
-            apps.
-          </h1>
-          <p className="mb-8 leading-relaxed">
-            Front end developer with 3+ years of experience in developing web
-            pages using Angular 10, HTML5, CSS3, JavaScript, Bootstrap and <br/>
-            Typescript Have good knowledge on OOPS concepts and hands on
-            experience with object-oriented JavaScript Dedicated to learning
-            additional technologies and coding languages
-          </p>
+    <section className="section bg-secondary" id="about">
+      <div className="container mx-auto flex-row">
+        <div className="flex flex-col xl:flex-row gap-24">
+          <img style={{ width: '18rem' }}
+            className="rounded-2xl"
+            src={Image}
+            alt=""
+          />
+          <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+            <div className="flex flex-col">
+              <h2 className="lg:text-4xl font-medium lg:font-extrabold mb-3 before:opacity-40 before:-top-[2rem] before:lg:block">
+                Sarita Kharabe
+              </h2>
+              <p className="mb-4 lg:text-3xl">
+                Full Stack Developer
+              </p>
+              <hr className="mb-8 opacity-5" />
+              <p className="mb-8">
+                I am a Full Stack developer leveraging my creative background to build
+                a more intuitive user experience on the web. Currenntly earning a
+                certificate in full stack Coding Bootcamp from The University of
+                Pennsylvania, My technical skills are HTML, CSS3, Angular
+                JavaScript, CSS, React.js, and responsive web design. <br></br>
+                I am an innovative problem solver passionate about
+                developing apps, focusing on Front end nad back end design and
+                development.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   );
-}
+};
+export default About;
