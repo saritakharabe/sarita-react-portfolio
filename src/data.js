@@ -5,39 +5,16 @@ import { FiLinkedin, FiGithub } from "react-icons/fi";
 import HTML from "./assets/image/skills/html.png";
 import CSS from "./assets/image/skills/css.png";
 import JavaScript from "./assets/image/skills/javascript.png";
-import Angular from "./assets/image/skills/angular.png"
-import Sql from "./assets/image/skills/sql.png"
+import Angular from "./assets/image/skills/angular.png";
+import Sql from "./assets/image/skills/sql.png";
 import Mongo from "./assets/image/skills/mongo.png";
 import Reactjs from "./assets/image/skills/react.png";
 import Nodejs from "./assets/image/skills/node.png";
 
-// navigation
-export const navigation = [
-  {
-    name: "home",
-    href: "home",
-  },
-  {
-    name: "about",
-    href: "about",
-  },
-  {
-    name: "skills",
-    href: "skills",
-  },
-  {
-    name: "project",
-    href: "project"
-  },
-  {
-    name: "resume",
-    href: "resume",
-  },
-  {
-    name: "contact",
-    href: "contact",
-  },
-];
+//project image
+import Nexus from './assets/image/projects/nexus-logo.png'
+import NationalPark from './assets/image/projects/park.jpg'
+import SvgLogo from './assets/image/projects/circle.png'
 
 //Skills
 export const techSkills = [
@@ -51,13 +28,13 @@ export const techSkills = [
     name: JavaScript,
   },
   {
-    name: Angular
+    name: Angular,
   },
   {
     name: Reactjs,
   },
   {
-    name: Sql
+    name: Sql,
   },
   {
     name: Nodejs,
@@ -77,4 +54,33 @@ export const social = [
     icon: <FiGithub />,
     href: "https://github.com/saritakharabe",
   },
+];
+
+export const projects = [
+  {
+    id: 1,
+    title: "National Park locator",
+    subtitle: "Javascript & RestAPI",
+    description: " We here to help you plan your next outdoor getaway",
+    image: NationalPark,
+    link: "https://github.com/saritakharabe/p1-national-parks-locator",
+  },
+  {
+    id: 2,
+    title: "College Social Network",
+    subtitle: "Full-Stack App",
+    description:
+      "Nexus is a Full-Stack application allows users to sign up and create an account, swhere they can input profile information, pictures, and write their own posts.",
+    imgage: Nexus,
+    link: "https://nexus-college-connections.herokuapp.com/",
+  },
+  {
+    id: 3,
+    title: "SVG Logo Generator",
+    subtitle: "Nodejs ",
+    description: "This project is used to build logo for application.",
+    image: SvgLogo,
+    link: "https://github.com/saritakharabe/OOP-SVG-logo-maker",
+  },
+  
 ];
