@@ -21,3 +21,13 @@
     @apply text-3xl lg:text-4xl font-medium lg:font-extrabold mb-5;
   }
 }
+
+.card{
+  margin: 10px 10px;
+}
+.card-body{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.card-title{
+  color: black;
+}

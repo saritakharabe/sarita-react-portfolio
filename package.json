@@ -41,7 +41,7 @@
     ]
   },
   "devDependencies": {
-    "@heroicons/react": "^2.0.18",
+    "@heroicons/react": "^1.0.6",
     "framer-motion": "^10.12.12",
     "react-icons": "^4.8.0",
     "react-scroll": "^1.8.9",

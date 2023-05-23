@@ -1,61 +1,62 @@
 import React from "react";
+
 import { projects } from "../../data";
 const styles = {
   header: {
     color: "blue",
-    fontFamily: "Rockwell, Courier Bold, Courier",
-  },
-  imgCard: {
-    background: "rgba(0, 0, 0, 0",
-    height: 300,
-    width: 300,
-    marginLeft: "auto",
-    marginRight: "auto",
+    fontFamily: "Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif",
   },
   img: {
-    height: 150,
-    width: 300,
+    height: 300,
+    width: 600,
+    marginLeft: "20",
+    marginRight: "20",
   },
   subtitle: {
-    fontFamily: "Rockwell, Courier Bold, Courier",
-    color: "white",
-    fontSize: 20,
+    fontFamily: "Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif",
+    color: "black",
+    fontSize: 15,
   },
   title: {
-    fontFamily: "Rockwell, Courier Bold, Courier",
+    fontFamily: "Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif",
     fontSize: 20,
     color: "white",
     textDecoration: "none",
   },
   link: {
-      fontSize: 15,
-      color: 'white',
-  }
+    fontSize: 25,
+    color: "black",
+  },
 };
 
 export default function Projects() {
   return (
     <section className="section bg-secondary">
-    <div className="container mx-auto flex-row">
-      <h1 style={styles.header}>Projects</h1>
-      <div className="row">
-        {projects.map((project) => (
-          <div
-            className="flex flex-col items-center text-center lg:items-start lg:text-left"
-            key={project.id}
-            style={styles.imgCard}
-          >
-            <div className="card-body">
-              <h2>{project.title}</h2>
-              <h3 style={styles.subtitle}>{project.subtitle}</h3>
-              <img src={project.image} style={styles.img} alt="" />
-              <a href={project.link} style={styles.link}>See details</a>
+      <div className="container">
+        <h1 style={styles.header}>Apps I've Build</h1>
+        <div className="row">
+          {projects.map((project) => (
+            <div className="col-sm-4" key={project.id}>
+              <div className="card-deck">
+              <div className="card">
+                <div className="card-body">
+                  <h2 class="card-title">{project.title}</h2>
+                  <h3 style={styles.subtitle}>{project.subtitle}</h3>
+                  <p class="card-text">{project.description}</p>
+                  <img src={project.image} style={styles.img} alt="" />
+                  <a
+                    href={project.link}
+                    style={styles.link}
+                  >
+                    See details
+                  </a>
+                </div>
+              </div>
+              </div>
             </div>
-          </div>
-          // </li>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
     </section>
   );
 }

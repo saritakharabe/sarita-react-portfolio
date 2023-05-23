@@ -13,8 +13,11 @@ import Nodejs from "./assets/image/skills/node.png";
 
 //project image
 import CollegeHacks from './assets/image/projects/College-life-hacks-2020.jpg'
-import NationalPark from './assets/image/projects/park.jpg'
-import SvgLogo from './assets/image/projects/circle.png'
+import NationalPark from './assets/image/projects/national-parks.webp'
+import SvgLogo from './assets/image/projects/svglogo.jpeg'
+import SocialNetwork from './assets/image/projects/socialNetwork.png'
+import EmployeeTracker from './assets/image/projects/employeeTracker.png'
+import PasswordGenerator from './assets/image/projects/pwd-generator.jpeg'
 
 //Skills
 export const techSkills = [
@@ -61,25 +64,50 @@ export const projects = [
     id: 1,
     title: "National Park locator",
     subtitle: "Javascript & RestAPI",
-    description: " We here to help you plan your next outdoor getaway",
+    description: " We are here to help you plan your next outdoor getaway",
     image: NationalPark,
-    link: "https://github.com/saritakharabe/p1-national-parks-locator",
+    link: "https://saritakharabe.github.io/p1-national-parks-locator/",
   },
   {
     id: 2,
     title: "Nexus App",
     subtitle: "Full-Stack App",
     description:
-      "Nexus is a Full-Stack application allows users to sign up and create an account, swhere they can input profile information, pictures, and write their own posts.",
+      "Nexus is a Full-Stack application allows users to sign up & create an account",
     image: CollegeHacks,
     link: "https://stark-castle-24891.herokuapp.com/",
   },
   {
     id: 3,
     title: "SVG Logo Generator",
-    subtitle: "Nodejs ",
+    subtitle: "Javascript ",
     description: "This project is used to build logo for application.",
     image: SvgLogo,
     link: "https://github.com/saritakharabe/OOP-SVG-logo-maker",
   },
+  {
+    id: 4,
+    title: "Social network APi",
+    subtitle: "ExpressJs, Javascript & MongoDb",
+    description: "Backend application.",
+    image: SocialNetwork,
+    link: "https://github.com/saritakharabe/Social-network-API",
+  },
+  {
+    id: 5,
+    title: "Employee Tracker",
+    subtitle: "NodeJs & Mysql",
+    description: "Backend application.",
+    image: EmployeeTracker,
+    link: "https://github.com/saritakharabe/Employee-Tracker",
+  },
+  {
+    id: 6,
+    title: "Password Generator",
+    subtitle: "Javascript, HTML and CSS",
+    description: "Front End Application",
+    image: PasswordGenerator,
+    link: "https://saritakharabe.github.io/password-generator/",
+  },
+
 ];

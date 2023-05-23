@@ -1,7 +1,7 @@
+import React from 'react';
+
 export default function Resume(){
     return(
-        <section>
-        <div>Resume Sections</div>
-        </section>
+        <div>Resume Sections</div> 
     );
 }
