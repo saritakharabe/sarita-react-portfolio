@@ -1,15 +1,8 @@
 import React from "react";
 import { projects } from "../../data";
 const styles = {
-  body: {
-    background: "#000018",
-    height: 525,
-    width: 800,
-    marginLeft: "auto",
-    marginRight: "auto",
-  },
   header: {
-    color: "white",
+    color: "blue",
     fontFamily: "Rockwell, Courier Bold, Courier",
   },
   imgCard: {
@@ -22,9 +15,8 @@ const styles = {
   img: {
     height: 150,
     width: 300,
-    boxShadow: "20px 10px 10px #000018",
   },
-  tech: {
+  subtitle: {
     fontFamily: "Rockwell, Courier Bold, Courier",
     color: "white",
     fontSize: 20,
@@ -35,6 +27,10 @@ const styles = {
     color: "white",
     textDecoration: "none",
   },
+  link: {
+      fontSize: 15,
+      color: 'white',
+  }
 };
 
 export default function Projects() {
@@ -51,9 +47,9 @@ export default function Projects() {
           >
             <div className="card-body">
               <h2>{project.title}</h2>
+              <h3 style={styles.subtitle}>{project.subtitle}</h3>
               <img src={project.image} style={styles.img} alt="" />
-              <h3 style={styles.tech}>{project.tech}</h3>
-              <a href={project.link}>See details</a>
+              <a href={project.link} style={styles.link}>See details</a>
             </div>
           </div>
           // </li>

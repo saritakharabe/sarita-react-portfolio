@@ -12,7 +12,7 @@ import Reactjs from "./assets/image/skills/react.png";
 import Nodejs from "./assets/image/skills/node.png";
 
 //project image
-import Nexus from './assets/image/projects/nexus-logo.png'
+import CollegeHacks from './assets/image/projects/College-life-hacks-2020.jpg'
 import NationalPark from './assets/image/projects/park.jpg'
 import SvgLogo from './assets/image/projects/circle.png'
 
@@ -67,12 +67,12 @@ export const projects = [
   },
   {
     id: 2,
-    title: "College Social Network",
+    title: "Nexus App",
     subtitle: "Full-Stack App",
     description:
       "Nexus is a Full-Stack application allows users to sign up and create an account, swhere they can input profile information, pictures, and write their own posts.",
-    imgage: Nexus,
-    link: "https://nexus-college-connections.herokuapp.com/",
+    image: CollegeHacks,
+    link: "https://stark-castle-24891.herokuapp.com/",
   },
   {
     id: 3,
@@ -82,5 +82,4 @@ export const projects = [
     image: SvgLogo,
     link: "https://github.com/saritakharabe/OOP-SVG-logo-maker",
   },
-  
 ];

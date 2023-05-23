@@ -30,6 +30,10 @@ function PortfolioContainer() {
         <div>
             <Navbar currentPage = {currentPage} handlePageChange={handlePageChange}/>
             {renderPage()}
+            {/* <About />
+            <Projects />
+            <Skills />
+            <Contact /> */}
         </div>
     );
 }
