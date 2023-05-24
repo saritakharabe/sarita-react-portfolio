@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/sarita-react-portfolio/static/css/main.f5962d0b.css",
+    "main.js": "/sarita-react-portfolio/static/js/main.baa2d39b.js",
+    "static/js/787.a2cb61a6.chunk.js": "/sarita-react-portfolio/static/js/787.a2cb61a6.chunk.js",
+    "static/media/profilepic.jpeg": "/sarita-react-portfolio/static/media/profilepic.5c40bd042b6471a7d8f5.jpeg",
+    "static/media/College-life-hacks-2020.jpg": "/sarita-react-portfolio/static/media/College-life-hacks-2020.ff66b984e2a340094967.jpg",
+    "static/media/saritaResume.pdf": "/sarita-react-portfolio/static/media/saritaResume.d2a6e11e6009a3f18065.pdf",
+    "static/media/pwd-generator.jpeg": "/sarita-react-portfolio/static/media/pwd-generator.08f24b992dce676172f7.jpeg",
+    "static/media/socialNetwork.png": "/sarita-react-portfolio/static/media/socialNetwork.8d3c2b46772af54ca0fb.png",
+    "static/media/react.png": "/sarita-react-portfolio/static/media/react.0cf951a69d8e58f83f9d.png",
+    "static/media/national-parks.webp": "/sarita-react-portfolio/static/media/national-parks.fa194e75ad13c38ffd51.webp",
+    "static/media/node.png": "/sarita-react-portfolio/static/media/node.952a9ea986dcfa5229ad.png",
+    "static/media/mongo.png": "/sarita-react-portfolio/static/media/mongo.2a1528ddc31d4ce8518d.png",
+    "static/media/html.png": "/sarita-react-portfolio/static/media/html.2ba4fabc69a89a8f71e6.png",
+    "static/media/css.png": "/sarita-react-portfolio/static/media/css.69a82c2d9e45c933a9cb.png",
+    "static/media/javascript.png": "/sarita-react-portfolio/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
+    "index.html": "/sarita-react-portfolio/index.html",
+    "main.f5962d0b.css.map": "/sarita-react-portfolio/static/css/main.f5962d0b.css.map",
+    "main.baa2d39b.js.map": "/sarita-react-portfolio/static/js/main.baa2d39b.js.map",
+    "787.a2cb61a6.chunk.js.map": "/sarita-react-portfolio/static/js/787.a2cb61a6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f5962d0b.css",
+    "static/js/main.baa2d39b.js"
+  ]
+}

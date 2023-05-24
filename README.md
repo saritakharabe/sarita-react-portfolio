@@ -17,3 +17,6 @@ When you first visit my portfolio site, the 'About' section will render first on
 
 ## Screenshot 
 ![project-screenshot](./finalScreenshot.png)
+
+## Deployed Link 
+* [Visit to Sarita's Portfolio](https://saritakharabe.github.io/sarita-react-portfolio/)
