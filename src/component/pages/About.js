@@ -21,13 +21,12 @@ const About = () => {
               </p>
               <hr className="mb-8 opacity-5" />
               <p className="mb-8">
-                I am a Full Stack developer leveraging my creative background to build
-                a more intuitive user experience on the web. Currenntly earning a
+                I am a Full Stack developer. Currently earning a
                 certificate in full stack Coding Bootcamp from The University of
                 Pennsylvania, My technical skills are HTML, CSS3, Angular
-                JavaScript, CSS, React.js, and responsive web design. <br></br>
+                JavaScript, CSS, React.js,Typescript, Java, MongoDb, MySql and responsive web design. <br></br>
                 I am an innovative problem solver passionate about
-                developing apps, focusing on Front end nad back end design and
+                developing apps, focusing on Front end and back end design and
                 development.
               </p>
             </div>

@@ -1,86 +1,149 @@
-import React from "react";
+import React, { useState } from "react";
+import validateEmail from "../../utils/helpers";
+
+const styles = {
+  body: {
+    background: "grey",
+    height: 525,
+    width: 750,
+    marginLeft: "auto",
+    marginRight: "auto",
+  },
+  header: {
+    color: "white",
+    fontFamily: "Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif",
+  },
+  text: {
+    color: "white",
+    fontFamily: "Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif",
+  },
+  label: {
+    color: "white",
+    fontSize: 20,
+    fontFamily: "Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif",
+  },
+  messageBody: {
+    height: 100,
+  },
+  submitBtn: {
+    marginTop: 25,
+    width: 200,
+    marginLeft: "auto",
+    marginRight: "auto",
+  },
+};
 
 export default function Contact() {
-  const [name, setName] = React.useState("");
-  const [email, setEmail] = React.useState("");
-  const [message, setMessage] = React.useState("");
+  // below are the useState variables needed to take user input
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+  //function to handle input change once user types in values
+  const handleInputChange = (e) => {
+    const { target } = e;
+    const inputType = target.name;
+    const inputValue = target.value;
 
-  function encode(data) {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&");
-  }
-
-  function handleSubmit(e) {
+    if (inputType === "name") {
+      setName(inputValue);
+    } else if (inputType === "email") {
+      setEmail(inputValue);
+    } else {
+      setMessage(inputValue);
+    }
+  };
+  //function that alerts user if their mouse leaves a field without writing content
+  const mouseHandler = (e) => {
+    const { value, name } = e.target;
+    if (name === "name" && value.trim() === "") {
+      setErrorMessage("Please Enter Your Name!");
+    } else if (name === "email" && value.trim() === "") {
+      setErrorMessage("Please Enter Your Email!");
+    } else if (name === "message" && value.trim() === "") {
+      setErrorMessage("Please Enter your Message!");
+    } else {
+      setErrorMessage("");
+    }
+  };
+  //function to handle the form submit and alerts user if their email is invalid/a section is blank
+  const handleFormSubmit = (e) => {
     e.preventDefault();
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", name, email, message }),
-    })
-      .then(() => alert("Message sent!"))
-      .catch((error) => alert(error));
-  }
+    const { value, name } = e.target;
+    if (!validateEmail(email)) {
+      setErrorMessage("Your email is invalid. Please try again!");
+      return;
+    }
+    if (name === "name" && value.trim() === "") {
+      setErrorMessage("Enter Your Name!");
+      return;
+    }
+    if (name === "email" && value.trim() === "") {
+      setErrorMessage("Enter Your Email!");
+      return;
+    }
+    if (name === "message" && value.trim() === "") {
+      setErrorMessage("Your Message!");
+    }
+    alert(`Thanks for reaching out to me ${name}!`);
+
+    setName("");
+    setEmail("");
+    setMessage("");
+  };
 
   return (
-    <section id="contact" className="relative bg-secondary">
-      <div className="container mx-auto flex sm:flex-nowrap flex-wrap">
-        <form
-          onSubmit={handleSubmit}
-          name="contact"
-          className="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0"
-        >
-          <h2 className="text-white sm:text-4xl text-3xl mb-1 font-medium title-font">
-            Contact Me
-          </h2>
-          <div className="relative mb-4">
-            <label htmlFor="name" className="leading-7 text-sm text-gray-400">
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base"
-              onChange={(e) => setName(e.target.value)}
-            />
-          </div>
-          <div className="relative mb-4">
-            <label htmlFor="email" className="leading-7 text-sm text-gray-400">
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-          <div className="relative mb-4">
-            <label
-              htmlFor="message"
-              className="leading-7 text-sm text-gray-400"
-            >
-              Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-              onChange={(e) => setMessage(e.target.value)}
-            />
-          </div>
+    // form with input conditions passed in
+    <div className="card" style={styles.body}>
+      <div className="card-body">
+        <h1 style={styles.header}>Contact Me</h1>
+        <form className="form">
+          <label style={styles.label}>Name</label>
+          <input
+            className="form-control"
+            value={name}
+            name="name"
+            onChange={handleInputChange}
+            onMouseLeave={mouseHandler}
+            type="text"
+            placeholder="Enter Your Name"
+          />
+          <label style={styles.label}>Email</label>
+          <input
+            className="form-control"
+            value={email}
+            name="email"
+            onChange={handleInputChange}
+            onMouseLeave={mouseHandler}
+            type="email"
+            placeholder="Enter your Email"
+          />
+          <label style={styles.label}>Message</label>
+          <textarea
+            className="form-control"
+            style={styles.messageBody}
+            value={message}
+            name="message"
+            onChange={handleInputChange}
+            onMouseLeave={mouseHandler}
+            type="text"
+            placeholder="Enter your Message"
+          />
+          {errorMessage && (
+            <div>
+              <p style={styles.text}>{errorMessage}</p>
+            </div>
+          )}
           <button
-            type="submit"
-            className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+            type="button"
+            className="form-control"
+            style={styles.submitBtn}
+            onClick={handleFormSubmit}
           >
-            Submit
+            Send Your Message
           </button>
         </form>
       </div>
-    </section>
+    </div>
   );
 }

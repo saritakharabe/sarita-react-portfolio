@@ -5,6 +5,7 @@ import Contact from './component/pages/Contact';
 import Resume from './component/pages/Resume';
 import Navbar from './Navbar';
 import Skills from './component/pages/Skills';
+import Footer from './footer';
 
 function PortfolioContainer() {
     const [currentPage, setCurrentPage] = useState('About');
@@ -34,6 +35,7 @@ function PortfolioContainer() {
             <Projects />
             <Skills />
             <Contact /> */}
+            <Footer currentPage={currentPage}></Footer>
         </div>
     );
 }

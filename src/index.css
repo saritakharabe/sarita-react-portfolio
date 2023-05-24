@@ -21,6 +21,10 @@
     @apply text-3xl lg:text-4xl font-medium lg:font-extrabold mb-5;
   }
 }
+p{
+  font-size: 18px;
+  color: rgb(199, 199, 156);
+}
 
 .card{
   margin: 10px 10px;
@@ -30,4 +34,20 @@
 }
 .card-title{
   color: black;
+}
+
+footer {
+  bottom: 0;
+  width: 100%;
+  background: rgb(193, 193, 209);
+  padding: 20px;
+  text-align: center;
+}
+
+.footerButtons{
+  padding: 20px 20px
+}
+
+a{
+  margin: 10px 10px;
 }

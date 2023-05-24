@@ -66,7 +66,8 @@ export const projects = [
     subtitle: "Javascript & RestAPI",
     description: " We are here to help you plan your next outdoor getaway",
     image: NationalPark,
-    link: "https://saritakharabe.github.io/p1-national-parks-locator/",
+    githubLink: 'https://github.com/saritakharabe/p1-national-parks-locator',
+    deployedLink: "https://saritakharabe.github.io/p1-national-parks-locator/",
   },
   {
     id: 2,
@@ -75,7 +76,8 @@ export const projects = [
     description:
       "Nexus is a Full-Stack application allows users to sign up & create an account",
     image: CollegeHacks,
-    link: "https://stark-castle-24891.herokuapp.com/",
+    githubLink:'https://github.com/saritakharabe/nexus-app',
+    deployedLink: "https://stark-castle-24891.herokuapp.com/",
   },
   {
     id: 3,
@@ -83,7 +85,7 @@ export const projects = [
     subtitle: "Javascript ",
     description: "This project is used to build logo for application.",
     image: SvgLogo,
-    link: "https://github.com/saritakharabe/OOP-SVG-logo-maker",
+    githubLink: "https://github.com/saritakharabe/OOP-SVG-logo-maker",
   },
   {
     id: 4,
@@ -91,7 +93,7 @@ export const projects = [
     subtitle: "ExpressJs, Javascript & MongoDb",
     description: "Backend application.",
     image: SocialNetwork,
-    link: "https://github.com/saritakharabe/Social-network-API",
+    githubLink: "https://github.com/saritakharabe/Social-network-API",
   },
   {
     id: 5,
@@ -99,7 +101,7 @@ export const projects = [
     subtitle: "NodeJs & Mysql",
     description: "Backend application.",
     image: EmployeeTracker,
-    link: "https://github.com/saritakharabe/Employee-Tracker",
+    githubLink: "https://github.com/saritakharabe/Employee-Tracker",
   },
   {
     id: 6,
@@ -107,7 +109,8 @@ export const projects = [
     subtitle: "Javascript, HTML and CSS",
     description: "Front End Application",
     image: PasswordGenerator,
-    link: "https://saritakharabe.github.io/password-generator/",
+    githubLink: 'https://github.com/saritakharabe/password-generator',
+    deployedLink: "https://saritakharabe.github.io/password-generator/",
   },
 
 ];

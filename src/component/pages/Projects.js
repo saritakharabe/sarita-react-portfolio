@@ -3,8 +3,9 @@ import React from "react";
 import { projects } from "../../data";
 const styles = {
   header: {
-    color: "blue",
+    color: "purple",
     fontFamily: "Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif",
+    textAlign: "center"
   },
   img: {
     height: 300,
@@ -14,7 +15,7 @@ const styles = {
   },
   subtitle: {
     fontFamily: "Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif",
-    color: "black",
+    color: "rgb(92, 92, 18)",
     fontSize: 15,
   },
   title: {
@@ -26,6 +27,8 @@ const styles = {
   link: {
     fontSize: 25,
     color: "black",
+    marginLeft: "20",
+    marginRight: "20"
   },
 };
 
@@ -45,10 +48,16 @@ export default function Projects() {
                   <p class="card-text">{project.description}</p>
                   <img src={project.image} style={styles.img} alt="" />
                   <a
-                    href={project.link}
+                    href={project.githubLink}
                     style={styles.link}
                   >
-                    See details
+                    Github Link
+                  </a>
+                  <a
+                    href={project.deployedLink}
+                    style={styles.link}
+                  >
+                    Deployed Link
                   </a>
                 </div>
               </div>
